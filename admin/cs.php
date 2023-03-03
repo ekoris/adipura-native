@@ -43,29 +43,17 @@ if(!isset($_SESSION["user"])) header("Location: login.php");
 	</div>
 
     <main role="main" class="container" style="padding-top: 30px;">
-		<h3 style="text-align: center;">Data Admin</h3>
+		<h3 style="text-align: center;">Data Admin Adipura</h3>
 		<div class="row">
 			<div class="col-md-12">
-			<h4>Tambah Admin</h4>
-			<form method="post" action="controllers/createAdmin.php">
-				<div class="form-group">
-					<label for="exampleInputEmail1">Nama Admin</label>
-					<input type="text" name="name" class="form-control">
-				</div>
-				
-				<div class="form-group">
-					<label for="exampleInputEmail1">Nomer Admin</label>
-					<input type="number" name="phone" class="form-control">
-				</div>
-				<button type="submit" class="btn btn-primary">Simpan</button>
-				</form>
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+					Tambah Admin
+				</button>
 			</div>
 		</div>
 		<hr>
         <div class="row">
             <div class="col-md-12 blog-main">
-				<h4>Data Admin Adipura</h4>
-				<hr>
 				<table id="example" class="table table-striped table-bordered table" cellspacing="0" width="100%">
 					<thead>
 						<tr>
@@ -83,8 +71,7 @@ if(!isset($_SESSION["user"])) header("Location: login.php");
 							while ($result=mysqli_fetch_array($query)) {
 						?>
 						<tr>
-							<td>
-								<a href="controllers/delete.php?id=<?php echo $result['id']; ?>"
+							<td><a href="controllers/DeleteAdmin.php?id=<?php echo $result['id']; ?>"
 									onclick="if (confirm('Apakah anda ingin menghapus ?')){return true;}else{event.stopPropagation(); event.preventDefault();};">
 									<button class="btn btn-danger">Hapus</button>
 								</a>
@@ -105,8 +92,44 @@ if(!isset($_SESSION["user"])) header("Location: login.php");
 			</div>
 			</div>
         </div><!-- /.row -->
-    </main><!-- /.container -->
+    </main>
+
+
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Tambah Admin</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<form method="post" action="controllers/createAdmin.php">
+					<div class="modal-body">
+						<div class="form-group">
+							<label for="exampleInputEmail1">Nama Admin</label>
+							<input type="text" name="name" required class="form-control">
+						</div>
+						
+						<div class="form-group">
+							<label for="exampleInputEmail1">Nomer Admin</label>
+							<input type="number" name="phone" placeholder="62823111111" required class="form-control">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-primary">Simpan</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<!-- /.container -->
     <!-- Bootstrap core JavaScript
+
+	
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery-3.2.1.slim.min.js"

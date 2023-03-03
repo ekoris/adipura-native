@@ -12,11 +12,10 @@ session_start();
 $_SESSION["message"] = null;
 if(isset($user)){
     $_SESSION["user"] = $user;
-    header("Location: ../index.php");
+    header('Location: '.base_url().'admin/index.php');
 }else{
     $_SESSION["message"] = 'Username/Password Salah';
-    header("Location: ../login.php");
+    header('Location: '.base_url().'admin/login.php');
 }
-
 
 ?>

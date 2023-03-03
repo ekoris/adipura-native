@@ -1,7 +1,7 @@
 <?php
-
+include "helper.php";
 session_start();
-if(!isset($_SESSION["user"])) header("Location: login.php");
+if(!isset($_SESSION["user"])) header('Location: login.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -67,7 +67,7 @@ if(!isset($_SESSION["user"])) header("Location: login.php");
 						?>
 						<tr>
 							<td>
-								<a href="controllers/delete.php?id=<?php echo $result['id']; ?>"
+								<a href="controllers/DeleteChat.php?id=<?php echo $result['id']; ?>"
 									onclick="if (confirm('Apakah anda ingin menghapus ?')){return true;}else{event.stopPropagation(); event.preventDefault();};">
 									<button class="btn btn-danger">Hapus</button>
 								</a>
