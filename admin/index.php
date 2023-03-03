@@ -55,6 +55,7 @@ if (!isset($_SESSION["user"])) header('Location: login.php');
 							<th>No</th>
 							<th>Name</th>
 							<th>Whatsapp</th>
+							<th>Whatsapp Admin</th>
 							<th>Tanggal Tersimpan</th>
 							<th>Status</th>
 							<th width="100px">Aksi</th>
@@ -81,6 +82,9 @@ if (!isset($_SESSION["user"])) header('Location: login.php');
 								</td>
 								<td>
 									<?php echo $result['phone']; ?>
+								</td>
+								<td>
+									<?php echo $result['wa_admin']; ?>
 								</td>
 								<td>
 									<?php echo $result['created_at']; ?>

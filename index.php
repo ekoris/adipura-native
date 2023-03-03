@@ -11,7 +11,6 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<link rel="stylesheet" href="assets/css/style.css">
-
 </head>
 
 <body style="
@@ -22,25 +21,13 @@
 	<section class="ftco-section" >
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-md-12 col-lg-10">
+				<div class="col-md-7 col-lg-7">
 					<div class="wrap d-md-flex">
-					
-						<div class="login-wrap p-4 p-lg-5" style="z-index: 1000;">
-						<div class="text w-100">
-								<h2>Selamat Datang di adipura books</h2>
-								<br>
-								<p>Silahkan isi data disamping untuk terhubung ke admin WA?</p>
-								<img src="assets/images/bocilbuku1.png" alt="" style="
-								    position: relative;
-									left: 48px;
-									top: 47px;
-									z-index: 1;
-									width: 100%;">
-							</div>
-							<div class="d-flex">
-								<div class="w-100">
-									<h3 class="mb-4">Data kamu</h3>
-								</div>
+						<div class="login-wrap p-4 p-lg-5">
+							<div class="text w-100" style="text-align: center;">
+								<img src="assets/images/logo-warna.png" style="width: 150px;" alt="">
+								<h2 style="color: #3B1B4E;font-weight: 900;">Selamat Datang di Adipura Books</h2>
+								<p style="color: #3B1B4E;font-weight: 500;">Silahkan isi data dibawah untuk terhubung ke admin WA</p>
 							</div>
 							<form action="controllers/create.php" class="signin-form" method="post">
 								<div class="form-group mb-3">

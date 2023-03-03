@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.5deb2
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 03, 2023 at 11:43 AM
--- Server version: 8.0.27-0ubuntu0.20.04.1
--- PHP Version: 7.4.30
+-- Generation Time: Mar 03, 2023 at 11:19 AM
+-- Server version: 8.0.30
+-- PHP Version: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -39,7 +38,8 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `number`, `name`) VALUES
-(10, '6282377673248', 'Admin 1');
+(2, '6287747965053', 'Admin  1'),
+(4, '6287839152237\r\n', 'Admin 2');
 
 -- --------------------------------------------------------
 
@@ -51,16 +51,10 @@ CREATE TABLE `orders` (
   `id` int NOT NULL,
   `name` varchar(255) DEFAULT NULL,
   `phone` varchar(255) DEFAULT NULL,
+  `wa_admin` varchar(255) DEFAULT NULL,
+  `status` int DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Dumping data for table `orders`
---
-
-INSERT INTO `orders` (`id`, `name`, `phone`, `created_at`) VALUES
-(9, 'meme', '082377673248', '2023-03-02 03:49:59'),
-(10, '23', '23', '2023-03-02 03:56:27');
 
 -- --------------------------------------------------------
 
@@ -111,13 +105,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
